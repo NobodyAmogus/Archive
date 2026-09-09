@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       <div class="detail-grid">
         <div>
           ${images ? `<div class="detail-images">${images}</div>` : ''}
+          ${item.body ? `<div class="prose">${item.body}</div>` : ''}
           ${item.notes ? `<h2>Notes</h2><p class="prose">${item.notes}</p>` : ''}
           ${related.length ? `
             <h2 style="margin-top:40px;">Related</h2>
