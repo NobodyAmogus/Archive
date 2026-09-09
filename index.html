@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Archive — a personal collection</title>
+<meta name="description" content="A personal digital archive of projects, experiments, notes, and things worth keeping.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html"><span class="dot"></span>The Archive</a>
+    <nav class="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" data-page="home">Home</a></li>
+        <li><a href="archive.html" data-page="archive">Archive</a></li>
+        <li><a href="projects.html" data-page="projects">Projects</a></li>
+        <li><a href="experiments.html" data-page="experiments">Experiments</a></li>
+        <li><a href="notes.html" data-page="notes">Notes</a></li>
+        <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+        <li><a href="about.html" data-page="about">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero container">
+    <p class="hero-kicker">Personal digital archive</p>
+    <h1>A running collection of things I've <em>made</em>, broken, and kept.</h1>
+    <p class="hero-desc">Projects, experiments, notes, screenshots and game mods — organized here mostly so I can find them again. Everything unfinished stays unfinished on purpose.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="archive.html">Browse the archive</a>
+      <a class="btn" href="about.html">What is this place?</a>
+    </div>
+
+    <div class="scrap-strip" id="scrap-strip" aria-label="Recent highlights"></div>
+  </section>
+
+  <section class="container">
+    <div class="section-heading">
+      <h2>Start somewhere</h2>
+    </div>
+    <div class="category-grid">
+      <a class="category-tile c1" href="projects.html">
+        <h3>Projects</h3><p>Larger, more finished work</p>
+      </a>
+      <a class="category-tile c2" href="experiments.html">
+        <h3>Experiments</h3><p>Small, unfinished, or half-broken</p>
+      </a>
+      <a class="category-tile c3" href="notes.html">
+        <h3>Notes</h3><p>Write-ups, tutorials, references</p>
+      </a>
+      <a class="category-tile c4" href="gallery.html">
+        <h3>Gallery</h3><p>Screenshots, art, diagrams</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-heading">
+      <h2>Recently added</h2>
+      <a href="archive.html">See everything &rarr;</a>
+    </div>
+    <div class="featured-strip" id="featured-strip"></div>
+  </section>
+
+  <section class="container">
+    <div class="section-heading">
+      <h2>Timeline</h2>
+      <a href="archive.html">Full archive &rarr;</a>
+    </div>
+    <div class="timeline" id="home-timeline"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>The Archive — updated whenever something's worth keeping.</span>
+    <span>Built with plain HTML, CSS &amp; JS.</span>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

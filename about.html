@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — The Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="about">
+
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html"><span class="dot"></span>The Archive</a>
+    <nav class="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" data-page="home">Home</a></li>
+        <li><a href="archive.html" data-page="archive">Archive</a></li>
+        <li><a href="projects.html" data-page="projects">Projects</a></li>
+        <li><a href="experiments.html" data-page="experiments">Experiments</a></li>
+        <li><a href="notes.html" data-page="notes">Notes</a></li>
+        <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+        <li><a href="about.html" data-page="about">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="about-hero">
+    <p class="hero-kicker">About</p>
+    <h1>Why this exists</h1>
+  </div>
+
+  <div class="about-blocks">
+    <div class="about-block">
+      <h3>What it is</h3>
+      <p>A personal archive of things I've built, broken, half-finished, or just found interesting enough to keep. Not a résumé — I never cleaned it up to look impressive, and I'm not planning to.</p>
+    </div>
+    <div class="about-block">
+      <h3>Why it exists</h3>
+      <p>I kept losing track of my own work — old projects buried in random folders, screenshots I couldn't find again, notes I'd written once and then forgotten I'd written. This is where all of that lives now, in one place I actually check.</p>
+    </div>
+    <div class="about-block">
+      <h3>What's stored here</h3>
+      <p>Software projects, small experiments, game mods, electronics tinkering, school notes, tutorials I wrote for myself, and a gallery of screenshots and images that didn't fit anywhere else. Unfinished and abandoned things are kept on purpose — they're as much a record as the finished ones.</p>
+    </div>
+    <div class="about-block">
+      <h3>How it's built</h3>
+      <p>Static HTML, CSS and JavaScript, hosted on GitHub Pages. Every entry is a JSON file in <code>/content</code> — adding something new means editing a data file, not rebuilding the site.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>The Archive — updated whenever something's worth keeping.</span>
+    <span>Built with plain HTML, CSS &amp; JS.</span>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+</body>
+</html>

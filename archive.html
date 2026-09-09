@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archive — The Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="archive">
+
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html"><span class="dot"></span>The Archive</a>
+    <nav class="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" data-page="home">Home</a></li>
+        <li><a href="archive.html" data-page="archive">Archive</a></li>
+        <li><a href="projects.html" data-page="projects">Projects</a></li>
+        <li><a href="experiments.html" data-page="experiments">Experiments</a></li>
+        <li><a href="notes.html" data-page="notes">Notes</a></li>
+        <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+        <li><a href="about.html" data-page="about">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="page-intro">
+    <p class="hero-kicker">Everything, in one place</p>
+    <h1>Archive</h1>
+    <p>Search, filter, or just scroll. This pulls from projects, experiments and notes all at once.</p>
+  </div>
+
+  <div class="archive-toolbar">
+    <input type="search" id="archive-search" placeholder="Search titles, tags, descriptions…" aria-label="Search archive">
+    <select class="filter-select" id="year-filter" aria-label="Filter by year"></select>
+  </div>
+
+  <div class="chip-row" id="category-chips" aria-label="Filter by category"></div>
+  <div class="chip-row" id="status-chips" aria-label="Filter by status"></div>
+
+  <p class="results-count" id="results-count"></p>
+  <div class="entry-grid" id="archive-grid"></div>
+  <div class="empty-state" id="empty-state" style="display:none;">
+    <h2>Nothing matches yet</h2>
+    <p>Try a different search term or clear the filters.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>The Archive — updated whenever something's worth keeping.</span>
+    <span>Built with plain HTML, CSS &amp; JS.</span>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/archive.js"></script>
+</body>
+</html>

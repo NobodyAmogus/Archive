@@ -1,0 +1,53 @@
+[
+  {
+    "id": "tidepool-launcher",
+    "title": "Tidepool Launcher",
+    "year": 2025,
+    "date": "2025-03-12",
+    "status": "Completed",
+    "category": "projects",
+    "tags": ["desktop-app", "electron", "ui"],
+    "description": "A minimal game launcher I built after getting fed up with bloated official ones. Tracks playtime, groups games by mood instead of genre.",
+    "cover": "\ud83c\udfae",
+    "images": [],
+    "tools": ["Electron", "SQLite", "JavaScript"],
+    "links": [{"label": "Source", "url": "#"}],
+    "downloads": [{"label": "v1.2 build (Windows)", "url": "#"}],
+    "notes": "Started as a weekend project, ended up using it daily for eight months. The mood-grouping idea came from realizing I never browse games by genre in my own head.",
+    "related": ["quiet-hours"]
+  },
+  {
+    "id": "quiet-hours",
+    "title": "Quiet Hours",
+    "year": 2024,
+    "date": "2024-11-02",
+    "status": "In Progress",
+    "category": "projects",
+    "tags": ["productivity", "menu-bar-app", "swift"],
+    "description": "A tiny macOS menu bar app that blocks notifications during scheduled focus blocks and logs how often I actually kept them.",
+    "cover": "\ud83d\udd15",
+    "images": [],
+    "tools": ["Swift", "AppKit"],
+    "links": [],
+    "downloads": [],
+    "notes": "Currently rebuilding the scheduling UI for the third time. Turns out recurring-schedule UX is deceptively hard.",
+    "related": ["tidepool-launcher"]
+  },
+  {
+    "id": "campus-map-archive",
+    "title": "Campus Map Archive",
+    "year": 2023,
+    "date": "2023-05-20",
+    "status": "Archived",
+    "category": "projects",
+    "tags": ["school", "leaflet", "history"],
+    "description": "Final-year project scanning and geo-referencing 40 years of old campus maps into one interactive slider.",
+    "cover": "\ud83d\uddfa\ufe0f",
+    "images": [],
+    "tools": ["Leaflet.js", "QGIS", "Python"],
+    "links": [{"label": "Write-up", "url": "#"}],
+    "downloads": [],
+    "notes": "Got a good grade on this. Archived it here rather than the university server since that has a habit of disappearing.",
+    "related": []
+  }
+]

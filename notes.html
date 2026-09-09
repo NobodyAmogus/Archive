@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notes — The Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="notes">
+
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html"><span class="dot"></span>The Archive</a>
+    <nav class="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" data-page="home">Home</a></li>
+        <li><a href="archive.html" data-page="archive">Archive</a></li>
+        <li><a href="projects.html" data-page="projects">Projects</a></li>
+        <li><a href="experiments.html" data-page="experiments">Experiments</a></li>
+        <li><a href="notes.html" data-page="notes">Notes</a></li>
+        <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+        <li><a href="about.html" data-page="about">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="page-intro">
+    <p class="hero-kicker" style="color:var(--gold)">Write-ups, tutorials, references</p>
+    <h1>Notes</h1>
+    <p>Tutorials, research, school material, and things I explained to myself well enough to write down.</p>
+  </div>
+  <div class="notes-list" id="notes-list"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>The Archive — updated whenever something's worth keeping.</span>
+    <span>Built with plain HTML, CSS &amp; JS.</span>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/notes-list.js"></script>
+</body>
+</html>
