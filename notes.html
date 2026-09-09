@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Notes — The Archive</title>
+<meta name="description" content="Write-ups, tutorials, references.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -13,6 +14,9 @@
 <header class="site-header">
   <div class="container">
     <a class="logo" href="index.html"><span class="dot"></span>The Archive</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <nav class="main-nav" aria-label="Main">
       <ul>
         <li><a href="index.html" data-page="home">Home</a></li>
@@ -27,13 +31,43 @@
   </div>
 </header>
 
-<main class="container">
-  <div class="page-intro">
-    <p class="hero-kicker" style="color:var(--gold)">Write-ups, tutorials, references</p>
-    <h1>Notes</h1>
-    <p>Tutorials, research, school material, and things I explained to myself well enough to write down.</p>
-  </div>
-  <div class="notes-list" id="notes-list"></div>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <p class="hero-kicker">Write-ups, tutorials, references</p>
+      <h1>Notes</h1>
+      <p>Things I wanted to remember later, written down so I didn't have to.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="entry-list">
+      <a class="entry" href="#">
+        <span class="entry-tag">Write-up</span>
+        <span class="entry-body">
+          <h3>Notes on slow rendering</h3>
+          <p>Why I stopped optimizing for speed and started optimizing for calm.</p>
+        </span>
+        <span class="entry-date">Jul 2026</span>
+      </a>
+      <a class="entry" href="#">
+        <span class="entry-tag">Reference</span>
+        <span class="entry-body">
+          <h3>Color notes: soft palettes</h3>
+          <p>A short reference for building palettes that read as calm rather than muted.</p>
+        </span>
+        <span class="entry-date">May 2026</span>
+      </a>
+      <a class="entry" href="#">
+        <span class="entry-tag">Essay</span>
+        <span class="entry-body">
+          <h3>On keeping unfinished things</h3>
+          <p>A short write-up on why this archive doesn't hide its drafts.</p>
+        </span>
+        <span class="entry-date">Feb 2026</span>
+      </a>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -43,8 +77,6 @@
   </div>
 </footer>
 
-<script src="js/data.js"></script>
 <script src="js/nav.js"></script>
-<script src="js/notes-list.js"></script>
 </body>
 </html>

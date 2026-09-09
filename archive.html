@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Archive — The Archive</title>
+<meta name="description" content="Everything, in one place, newest first.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -13,6 +14,9 @@
 <header class="site-header">
   <div class="container">
     <a class="logo" href="index.html"><span class="dot"></span>The Archive</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <nav class="main-nav" aria-label="Main">
       <ul>
         <li><a href="index.html" data-page="home">Home</a></li>
@@ -27,27 +31,59 @@
   </div>
 </header>
 
-<main class="container">
-  <div class="page-intro">
-    <p class="hero-kicker">Everything, in one place</p>
-    <h1>Archive</h1>
-    <p>Search, filter, or just scroll. This pulls from projects, experiments and notes all at once.</p>
-  </div>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <p class="hero-kicker">Everything, in one place</p>
+      <h1>The full archive</h1>
+      <p>Projects, experiments and notes, mixed together and sorted by when they were last touched.</p>
+    </div>
+  </section>
 
-  <div class="archive-toolbar">
-    <input type="search" id="archive-search" placeholder="Search titles, tags, descriptions…" aria-label="Search archive">
-    <select class="filter-select" id="year-filter" aria-label="Filter by year"></select>
-  </div>
-
-  <div class="chip-row" id="category-chips" aria-label="Filter by category"></div>
-  <div class="chip-row" id="status-chips" aria-label="Filter by status"></div>
-
-  <p class="results-count" id="results-count"></p>
-  <div class="entry-grid" id="archive-grid"></div>
-  <div class="empty-state" id="empty-state" style="display:none;">
-    <h2>Nothing matches yet</h2>
-    <p>Nothing's been added yet — try a different search or check back later.</p>
-  </div>
+  <section class="container">
+    <div class="entry-list">
+      <a class="entry" href="#">
+        <span class="entry-tag">Project</span>
+        <span class="entry-body">
+          <h3>Meadowlight</h3>
+          <p>A small static-site generator built for archives like this one.</p>
+        </span>
+        <span class="entry-date">Aug 2026</span>
+      </a>
+      <a class="entry" href="#">
+        <span class="entry-tag">Note</span>
+        <span class="entry-body">
+          <h3>Notes on slow rendering</h3>
+          <p>Why I stopped optimizing for speed and started optimizing for calm.</p>
+        </span>
+        <span class="entry-date">Jul 2026</span>
+      </a>
+      <a class="entry" href="#">
+        <span class="entry-tag">Experiment</span>
+        <span class="entry-body">
+          <h3>Field-recorder sketch</h3>
+          <p>A weekend attempt at ambient sound collage. Half-finished, kept anyway.</p>
+        </span>
+        <span class="entry-date">Jun 2026</span>
+      </a>
+      <a class="entry" href="#">
+        <span class="entry-tag">Project</span>
+        <span class="entry-body">
+          <h3>Wayfinder</h3>
+          <p>A tiny offline map tool for hiking trails with no signal.</p>
+        </span>
+        <span class="entry-date">Apr 2026</span>
+      </a>
+      <a class="entry" href="#">
+        <span class="entry-tag">Note</span>
+        <span class="entry-body">
+          <h3>On keeping unfinished things</h3>
+          <p>A short write-up on why this archive doesn't hide its drafts.</p>
+        </span>
+        <span class="entry-date">Feb 2026</span>
+      </a>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -57,8 +93,6 @@
   </div>
 </footer>
 
-<script src="js/data.js"></script>
 <script src="js/nav.js"></script>
-<script src="js/archive.js"></script>
 </body>
 </html>

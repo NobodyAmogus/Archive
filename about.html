@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About — The Archive</title>
+<meta name="description" content="What this place is, and why it exists.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -13,6 +14,9 @@
 <header class="site-header">
   <div class="container">
     <a class="logo" href="index.html"><span class="dot"></span>The Archive</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <nav class="main-nav" aria-label="Main">
       <ul>
         <li><a href="index.html" data-page="home">Home</a></li>
@@ -27,30 +31,21 @@
   </div>
 </header>
 
-<main class="container">
-  <div class="about-hero">
-    <p class="hero-kicker">About</p>
-    <h1>Why this exists</h1>
-  </div>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <p class="hero-kicker">What is this place?</p>
+      <h1>About the archive</h1>
+    </div>
+  </section>
 
-  <div class="about-blocks">
-    <div class="about-block">
-      <h3>What it is</h3>
-      <p>A personal archive of things I've built, broken, half-finished, or just found interesting enough to keep. Not a résumé — I never cleaned it up to look impressive, and I'm not planning to.</p>
+  <section class="container">
+    <div class="about-body">
+      <p>This is a personal collection, not a portfolio. Some of it is finished. Most of it isn't. It stays up anyway, because half-finished things are still worth being able to find again.</p>
+      <p>There's no editorial calendar here and no attempt to look busier than I am. Things get added when they exist, and they stay roughly as messy as they were when I made them.</p>
+      <p>If something here is useful to you, that's a nice coincidence. If it's a little strange or unfinished, that's on purpose.</p>
     </div>
-    <div class="about-block">
-      <h3>Why it exists</h3>
-      <p>I kept losing track of my own work — old projects buried in random folders, screenshots I couldn't find again, notes I'd written once and then forgotten I'd written. This is where all of that lives now, in one place I actually check.</p>
-    </div>
-    <div class="about-block">
-      <h3>What's stored here</h3>
-      <p>Software projects, small experiments, game mods, electronics tinkering, school notes, tutorials I wrote for myself, and a gallery of screenshots and images that didn't fit anywhere else. Unfinished and abandoned things are kept on purpose — they're as much a record as the finished ones.</p>
-    </div>
-    <div class="about-block">
-      <h3>How it's built</h3>
-      <p>Static HTML, CSS and JavaScript, hosted on GitHub Pages. Every entry is a JSON file in <code>/content</code> — adding something new means editing a data file, not rebuilding the site.</p>
-    </div>
-  </div>
+  </section>
 </main>
 
 <footer class="site-footer">
