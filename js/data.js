@@ -1,34 +1,67 @@
-/* ============================================================
-   Shared data loading + small helpers used across pages.
-   All content lives in /content/*.json — edit those files to
-   add archive entries. No build step required.
-   ============================================================ */
+function mapEntry(row) {
+  return {
+    id: row.id,
+    category: row.category,
+    title: row.title,
+    description: row.description || '',
+    body: row.body || '',
+    notes: row.notes || '',
+    status: row.status || '',
+    date: row.entry_date,
+    year: row.entry_date ? new Date(row.entry_date + 'T00:00:00').getFullYear() : '',
+    tags: row.tags || [],
+    tools: row.tools || [],
+    cover: row.cover_url || '',
+    images: row.images || []
+  };
+}
 
-const CONTENT_BASE = (() => {
-  // works whether pages are loaded from root or a subfolder
-  const path = window.location.pathname;
-  return path.includes('/pages/') ? '../content/' : 'content/';
-})();
+function mapGalleryItem(row) {
+  return {
+    id: row.id,
+    title: row.title,
+    caption: row.caption || '',
+    image: row.image_url
+  };
+}
 
 async function loadJSON(name) {
-  const res = await fetch(`${CONTENT_BASE}${name}.json`);
-  if (!res.ok) throw new Error(`Failed to load ${name}.json`);
-  return res.json();
+  if (name === 'gallery') {
+    const { data, error } = await window.archiveDb
+      .from('gallery_items')
+      .select('*')
+      .order('created_at', { ascending: false });
+
+    if (error) throw error;
+    return data.map(mapGalleryItem);
+  }
+
+  const { data, error } = await window.archiveDb
+    .from('entries')
+    .select('*')
+    .eq('category', name)
+    .order('entry_date', { ascending: false });
+
+  if (error) throw error;
+  return data.map(mapEntry);
 }
 
 async function loadAllEntries() {
   const [projects, experiments, notes] = await Promise.all([
     loadJSON('projects'),
     loadJSON('experiments'),
-    loadJSON('notes'),
+    loadJSON('notes')
   ]);
+
   return [...projects, ...experiments, ...notes];
 }
 
 function fmtDate(iso) {
   if (!iso) return '';
-  const d = new Date(iso + 'T00:00:00');
-  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+  return new Date(iso + 'T00:00:00').toLocaleDateString(
+    'en-US',
+    { year: 'numeric', month: 'short', day: 'numeric' }
+  );
 }
 
 function statusClass(status) {
@@ -43,23 +76,16 @@ function qs(param) {
   return new URLSearchParams(window.location.search).get(param);
 }
 
-function el(html) {
-  const t = document.createElement('template');
-  t.innerHTML = html.trim();
-  return t.content.firstElementChild;
-}
-
-/* Renders a single entry card for grids (projects/experiments/archive) */
 function entryCardHTML(item, opts = {}) {
   const detailPage = item.body ? 'note.html' : 'entry.html';
-  const desc = item.description || '';
   const big = opts.big ? ' big' : '';
+
   return `
     <a class="entry-card${big} ${catClass(item.category)}" href="${detailPage}?id=${item.id}">
-      <div class="thumb">${item.cover || '\u2726'}</div>
+      <div class="thumb">${item.cover || '✦'}</div>
       <div class="body">
         <h3>${item.title}</h3>
-        <p>${desc}</p>
+        <p>${item.description}</p>
         <div class="meta">
           <span class="pill">${item.year}</span>
           ${item.status ? `<span class="pill ${statusClass(item.status)}">${item.status}</span>` : ''}
@@ -73,7 +99,7 @@ function noteRowHTML(item) {
     <a class="note-row" href="note.html?id=${item.id}">
       <div>
         <h3>${item.title}</h3>
-        <p>${item.description || ''}</p>
+        <p>${item.description}</p>
       </div>
       <span class="date">${item.year}</span>
     </a>`;
