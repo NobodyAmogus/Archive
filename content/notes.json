@@ -28,5 +28,15 @@
     "tags": ["game-modding", "skyrim", "reference"],
     "description": "Things that cost me hours while building the weather mod, written down so future me doesn't repeat them.",
     "body": "<p>Papyrus compiles silently succeed even when a script reference is null at runtime &mdash; check the log, not the compiler.</p><ul><li>OnUpdate events drift if the game is paused mid-timer.</li><li>Weather scripts run on their own thread; don't assume ordering against quest scripts.</li><li>Always test in a fresh save, not your main save, once state gets weird it stays weird.</li></ul>"
+  },
+  {
+    "id": "how-to-add-stuff-here",
+    "title": "How to add stuff here",
+    "year": 2026,
+    "date": "2026-09-09",
+    "category": "notes",
+    "tags": ["meta", "reference"],
+    "description": "Reminder to self on editing the JSON content files instead of touching HTML.",
+    "body": "<p>Edit the JSON files in <code>/content</code> directly &mdash; no HTML or code touched.</p><h2>Add or edit a project</h2><p>In <code>content/projects.json</code>, copy an existing object and change the fields:</p><pre>{\n  \"id\": \"my-new-thing\",\n  \"title\": \"My New Thing\",\n  \"year\": 2026,\n  \"date\": \"2026-01-15\",\n  \"status\": \"In Progress\",\n  \"category\": \"projects\",\n  \"tags\": [\"web\", \"css\"],\n  \"description\": \"One-line summary shown on cards.\",\n  \"cover\": \"\ud83d\udee0\ufe0f\",\n  \"images\": [\"images/my-new-thing-1.png\"],\n  \"tools\": [\"HTML\", \"CSS\"],\n  \"links\": [{\"label\": \"Source\", \"url\": \"https://...\"}],\n  \"downloads\": [],\n  \"notes\": \"Longer writeup, shown on the detail page.\",\n  \"related\": [\"tidepool-launcher\"]\n}</pre><p>Same idea for <code>experiments.json</code>, <code>notes.json</code> (uses a <code>body</code> field of HTML instead of <code>notes</code>), and <code>gallery.json</code>.</p>"
   }
 ]
