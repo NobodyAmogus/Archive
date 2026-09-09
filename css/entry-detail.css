@@ -1,0 +1,21 @@
+.entry-body {
+  max-width: 68ch;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.entry-notes {
+  max-width: 68ch;
+  margin-top: 56px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line-strong);
+}
+
+.entry-notes h2 {
+  margin-bottom: 14px;
+  font-size: 1.75rem;
+}
+
+.entry-notes p {
+  margin-bottom: 0;
+}
