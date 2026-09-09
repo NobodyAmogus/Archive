@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Featured strip: most recent as big feature, next 3 as mini cards
   const [feature, ...rest] = all.slice(0, 4);
-  const featureLink = feature.body ? 'note.html' : 'entry.html';
+  const featureLink = feature.category === 'notes' ? 'note.html' : 'entry.html';
   document.getElementById('featured-strip').innerHTML = `
     <a class="featured-main" href="${featureLink}?id=${feature.id}">
       <span class="k">${feature.category}</span>
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     </a>
     <div class="featured-side">
       ${rest.map(item => {
-        const link = item.body ? 'note.html' : 'entry.html';
+        const link = item.category === 'notes' ? 'note.html' : 'entry.html';
         return `<a class="mini-card" href="${link}?id=${item.id}">
           <h4>${item.title}</h4><span>${item.year}</span>
         </a>`;
