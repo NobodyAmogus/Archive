@@ -80,10 +80,10 @@ function entryCardHTML(item, opts = {}) {
   const detailPage = item.body ? 'note.html' : 'entry.html';
   const big = opts.big ? ' big' : '';
 
-  return `
-    <a class="entry-card${big} ${catClass(item.category)}" href="${detailPage}?id=${item.id}">
-      <div class="thumb">${item.cover || '✦'}</div>
-      <div class="body">
+return `
+  <a class="entry-card${big} ${catClass(item.category)}" href="${detailPage}?id=${item.id}">
+    ${item.cover ? `<div class="thumb"><img src="${item.cover}" alt=""></div>` : ''}
+    <div class="body">
         <h3>${item.title}</h3>
         <p>${item.description}</p>
         <div class="meta">
