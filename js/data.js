@@ -79,10 +79,13 @@ function qs(param) {
 function entryCardHTML(item, opts = {}) {
   const detailPage = item.category === 'notes' ? 'note.html' : 'entry.html';
   const big = opts.big ? ' big' : '';
+  const cover = item.cover
+    ? `<div class="thumb"><img src="${item.cover}" alt="" loading="lazy"></div>`
+    : '';
 
   return `
     <a class="entry-card${big} ${catClass(item.category)}" href="${detailPage}?id=${item.id}">
-      <div class="thumb">${item.cover || '✦'}</div>
+      ${cover}
       <div class="body">
         <h3>${item.title}</h3>
         <p>${item.description}</p>
