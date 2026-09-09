@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   const items = await loadJSON('gallery');
   const masonry = document.getElementById('masonry');
 
+  if (!items.length) {
+    masonry.outerHTML = `<div class="empty-state"><h2>Nothing here yet</h2><p>Add entries to <code>content/gallery.json</code> to fill this page.</p></div>`;
+    return;
+  }
+
   masonry.innerHTML = items.map(item => `
     <figure data-id="${item.id}">
       <img src="${item.image}" alt="${item.title}" loading="lazy">

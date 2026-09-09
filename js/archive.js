@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (filtered.length === 0) {
       grid.innerHTML = '';
-      grid.insertAdjacentHTML('afterend', '');
       document.getElementById('empty-state').style.display = 'block';
     } else {
       document.getElementById('empty-state').style.display = 'none';

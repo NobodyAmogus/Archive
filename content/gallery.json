@@ -1,10 +1,1 @@
-[
-  {"id":"g1","title":"Tidepool launcher, early UI sketch","year":2025,"tags":["projects","ui"],"image":"https://placehold.co/500x650/ffe3de/221c17?text=Sketch","caption":"First pass at the launcher UI, before the mood-grouping idea."},
-  {"id":"g2","title":"Overcast Overhaul screenshot","year":2024,"tags":["experiments","skyrim"],"image":"https://placehold.co/500x330/d7f3ee/221c17?text=Screenshot","caption":"Whiterun under the new weather tables."},
-  {"id":"g3","title":"Campus map, 1978 scan","year":2023,"tags":["projects","history"],"image":"https://placehold.co/500x700/fdedc7/221c17?text=Scan","caption":"Raw scan before geo-referencing."},
-  {"id":"g4","title":"ESP32 sensor breadboard","year":2024,"tags":["experiments","electronics"],"image":"https://placehold.co/500x500/e9e2ff/221c17?text=Breadboard","caption":"Before the corrosion incident."},
-  {"id":"g5","title":"Liquid blob test frames","year":2025,"tags":["experiments","css"],"image":"https://placehold.co/500x400/ffe3de/221c17?text=Blobs","caption":"Three variations of the goo filter settings."},
-  {"id":"g6","title":"Dotfiles terminal setup","year":2023,"tags":["experiments","config"],"image":"https://placehold.co/500x600/d7f3ee/221c17?text=Terminal","caption":"After the third rewrite."},
-  {"id":"g7","title":"Quiet Hours menu bar mockup","year":2024,"tags":["projects","ui"],"image":"https://placehold.co/500x330/fdedc7/221c17?text=Mockup","caption":"Second attempt at the scheduling popover."},
-  {"id":"g8","title":"Campus map final overlay","year":2023,"tags":["projects","history"],"image":"https://placehold.co/500x650/e9e2ff/221c17?text=Overlay","caption":"1978 map faded over the current one."}
-]
+[]
